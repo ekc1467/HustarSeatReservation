@@ -1,0 +1,29 @@
+{{>layouts/header}}
+<!-- jumbotron -->
+<div class="jumbotron">
+    <h1>C5 호실 예약 목록</h1>
+    <hr>
+    <p>311호, 316호, 408호, 708호</p>
+    <a href="/articles/new" class="btn btn-primary">예약하기</a>
+</div>
+
+<!-- articles table -->
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>순번</th>
+        <th>호실 예약</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#articles}}
+        <tr>
+            <td>{{id}}</td>
+            <td>
+                <a href="/articles/{{id}}">{{title}}</a> <!-- 링크 추가 -->
+            </td>
+        </tr>
+    {{/articles}}
+    </tbody>
+</table>
+{{>layouts/footer}}
